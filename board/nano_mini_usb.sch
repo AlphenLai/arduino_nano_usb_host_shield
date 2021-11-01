@@ -102,8 +102,6 @@ F 3 "" H 6300 4600 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	6400 2050 6400 2350
-Wire Wire Line
 	6200 4350 6200 4500
 Wire Wire Line
 	6200 4500 6300 4500
@@ -286,17 +284,6 @@ Wire Wire Line
 	3850 4800 4200 4800
 Wire Wire Line
 	3850 4900 4200 4900
-$Comp
-L power:+5V #PWR07
-U 1 1 61563939
-P 7650 3200
-F 0 "#PWR07" H 7650 3050 50  0001 C CNN
-F 1 "+5V" H 7665 3373 50  0000 C CNN
-F 2 "" H 7650 3200 50  0001 C CNN
-F 3 "" H 7650 3200 50  0001 C CNN
-	1    7650 3200
-	0    -1   -1   0   
-$EndComp
 Wire Wire Line
 	7650 3200 7750 3200
 Wire Wire Line
@@ -637,10 +624,6 @@ Wire Wire Line
 Connection ~ 4100 5300
 Wire Wire Line
 	4100 5300 4200 5300
-Text GLabel 6400 2050 1    50   Input ~ 0
-arduino_pwr
-Text GLabel 4200 3800 2    50   Input ~ 0
-arduino_pwr
 $Comp
 L Connector:Conn_01x02_Male J8
 U 1 1 6167CED8
@@ -653,11 +636,7 @@ F 3 "~" H 3650 3800 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3850 3800 4200 3800
-Wire Wire Line
 	3850 3900 4400 3900
-Wire Wire Line
-	4400 3900 4400 4000
 Wire Wire Line
 	4400 4150 3850 4150
 Wire Wire Line
@@ -700,20 +679,32 @@ Text GLabel 5600 3550 0    50   Input ~ 0
 LED1
 Text GLabel 5600 3650 0    50   Input ~ 0
 LED2
+Text GLabel 7650 3200 0    50   Input ~ 0
+arduino_pwr
+Wire Wire Line
+	6400 2050 6400 2350
+Text GLabel 6400 2050 1    50   Input ~ 0
+arduino_pwr
 $Comp
 L power:+5V #PWR0101
 U 1 1 617ECCFA
-P 4500 4000
-F 0 "#PWR0101" H 4500 3850 50  0001 C CNN
-F 1 "+5V" V 4515 4128 50  0000 L CNN
-F 2 "" H 4500 4000 50  0001 C CNN
-F 3 "" H 4500 4000 50  0001 C CNN
-	1    4500 4000
+P 4250 3700
+F 0 "#PWR0101" H 4250 3550 50  0001 C CNN
+F 1 "+5V" V 4265 3828 50  0000 L CNN
+F 2 "" H 4250 3700 50  0001 C CNN
+F 3 "" H 4250 3700 50  0001 C CNN
+	1    4250 3700
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	4400 4000 4500 4000
-Connection ~ 4400 4000
+	4150 3700 4250 3700
 Wire Wire Line
-	4400 4000 4400 4150
+	4400 3900 4400 4150
+Wire Wire Line
+	4150 3700 4150 3800
+Wire Wire Line
+	3850 3800 4150 3800
+Wire Wire Line
+	4150 3800 4200 3800
+Connection ~ 4150 3800
 $EndSCHEMATC
